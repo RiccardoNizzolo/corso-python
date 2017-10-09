@@ -26,7 +26,7 @@ def primeNumbers(n):
 
 
 if __name__ == '__main__':
-    tests=[5,11,]
+    tests=[5,11]
     risultato=[[2,3,5],[2,3,5,7,11]]
 
     for i in range(len(risultato)):
