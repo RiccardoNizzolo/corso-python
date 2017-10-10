@@ -4,7 +4,7 @@ es: primeNumbers(5)->[2,3,5]
 primeNumbers(10)->[2,3,5,7]
 oss: 1 non è un numero primo.
 
-Aiuto: Il crivello di eratostene è forse l'algoritmo più semplice da implementare: https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
+Aiuto: Il crivello di Eratostene è forse l'algoritmo più semplice da implementare: https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
 '''
 
 import math

@@ -1,8 +1,8 @@
 '''
-Completare la funzione in modo che presa una stringa conti il numero di parole contenute
+Completare la funzione in modo che presa una stringa conti il numero di parole contenute. Il sepratore tra parole è lo spazio.
 es: Stringa Di Prova --> 3
     Altra Stringa Di Prova --> 4
-    Il sepratore tra parole è lo spazio
+
 
 '''
 def countWord(inputString):
