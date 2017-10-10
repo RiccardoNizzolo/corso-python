@@ -21,6 +21,9 @@ lista=['sono','una','lista']  #questa è una lista
 tupla=('sono','una','tupla')   #questa è una tupla
 dizionario = {'datatype': 'Dizionario', 'messaggio': 'sono un dizionario'} #questo è un dizionario
 
+print(type(numero))#stampa il tipo di numero
+print(type(stringa))#stampa il tipo di stringa
+print(type(dizionario))#stampa il tipo di dizionario
 
 #ESERCIZIO far stampare ognuno dei tipi base
 #-------------------------------------------------------------------------------------- your code here!!!

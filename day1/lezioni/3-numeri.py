@@ -20,7 +20,7 @@ print('stampa il valore assoluto:')
 print(abs(decimale))
 
 
-#DOMANDA-- cosa succede se sommo un decimale e un complesso? di che tipo è il risultato?
+#DOMANDA-- cosa succede se sommo un decimale e un complesso? di che tipo è il risultato? cosa restituisce la funzione type()?
 #ESERCIZIO stampare il numero decimale arrotondato alla seconda cifra decimale
 #-------------------------------------------------------------------------------------- your code here!!!
 
