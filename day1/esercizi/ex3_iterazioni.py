@@ -6,7 +6,7 @@ n=5 --> 1+2+3+4+5=15
 
 import math
 
-def f(n):
+def integerSum(n):
     risultato=0
     #-------------------------------------------------------------------------------------- your code here!!!
 
@@ -20,15 +20,13 @@ def f(n):
     return risultato
 
 
-
-
 if __name__ == '__main__':
     test=[1,2,3,4,5,100,101]
     risultato=[1,3,6,10,15,5050,5151]
 
     for i in range(len(risultato)):
 
-        if(risultato[i]==f(test[i])):
+        if(risultato[i]==integerSum(test[i])):
             print('OK test '+str(i)+' ok')
         else:
-            print('FAIL test with xyz -' + str(test[i])+ '- got '+str(f(test[i]))+' expected '+str(risultato[i]))
+            print('FAIL test with xyz -' + str(test[i])+ '- got '+str(integerSum(test[i]))+' expected '+str(risultato[i]))
