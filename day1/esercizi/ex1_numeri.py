@@ -1,7 +1,7 @@
 '''
 Completare la funzione f(x,y,z) i modo che restituisca il massimo tra:
 1) (x+y+z)^3
-2) (ln(y+1)/x)^z
+2) (ln(y)/x)^z
 
 è possibile usare le funzioni della libreria math: https://docs.python.org/3/library/math.html
 '''
@@ -11,9 +11,6 @@ import math
 def f(x,y,z):
     risultato=0
     #-------------------------------------------------------------------------------------- your code here!!!
-
-
-
 
 
 
