@@ -1,7 +1,7 @@
-from ex1_binomiale import *
-from ex2_camelCase import *
-from ex3_luggageLoader import *
 import unittest
+from day2.esercizi.ex1_binomiale import fattoriale, coefficienteBinomiale
+from day2.esercizi.ex2_camelCase import toCamelCase, fromCamelCase
+from day2.esercizi.ex3_luggageLoader import unloadingOrder
 
 
 class TestBinomiale(unittest.TestCase):
