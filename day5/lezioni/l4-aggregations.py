@@ -15,7 +15,7 @@ pf=pd.read_csv('resources/pf.csv', sep='|',low_memory =False)
 #   -il massimo e il minimo della data di scadenza degli ordini
 aggregatedDataset=pf.groupby('codp').agg({'qta': ['min', 'max','sum'], 'scadenza': ['max','min']})
 print(aggregatedDataset)
-
+a=0
 
 
 # ESERCIZIO calcolare la somma della quantità in scadenza per ogni mese

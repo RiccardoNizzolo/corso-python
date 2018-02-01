@@ -19,3 +19,12 @@ if __name__ == '__main__':
     # ESERCIZIO Crea un file excel con la somma dei consumi aggregati per mese
     # HINT: rivedi la lezione  day5-l3 per capire come creare la colonna mese
     # -------------------------------------------------------------------------------------- your code here!!!
+    data['datetime']=pd.to_datetime(data['datetime'])
+    #creo la colonna mese
+    data['mese']=data['datetime'].dt.month
+
+    # aggrego
+    aggByMonth=data.groupby('mese').agg({'wattConsumption':'sum'})
+
+    # salvo
+    aggByMonth.to_excel('output/aggBymonth.xls')

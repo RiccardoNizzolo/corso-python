@@ -22,6 +22,7 @@ print(pf['scadenza'].dt.dayofweek)
 # ESERCIZIO aggiungere una colonna al dataset pf con il quarter di scadenza
 # -------------------------------------------------------------------------------------- your code here!!!
 print('aggiungere una colonna con il quarter di scadenza')
+pf['quarter']=pf['scadenza'].dt.quarter
 
-
+pf.to_excel('nome.xlsx')
 

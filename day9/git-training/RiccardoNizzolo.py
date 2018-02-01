@@ -3,4 +3,5 @@ def get_name():
     return 'Riccardo Nizzolo'
 
 def get_abilities():
-    return ['1','2','3','3','4']
+    return ['1','2','3','programmatore','barbuto','gentile']
+

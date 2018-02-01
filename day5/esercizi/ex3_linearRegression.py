@@ -24,10 +24,10 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 
 # carico il dataset contenente i dati di train
-train = pd.read_csv('resources\\sample_train.csv')
+train = pd.read_csv('resources/sample_train.csv')
 
 # carico i dati di test.
-test = pd.read_csv('resources\\sample_test.csv')
+test = pd.read_csv('resources/sample_test.csv')
 
 # prendo dai dati di train la colonna che devo predire
 label=train['wattConsumption']
@@ -39,7 +39,7 @@ train=train[['T_HR_AVG','SOLARAD-W/m^2','HouseId','solarPanelMq']]
 test=test[['T_HR_AVG','SOLARAD-W/m^2','HouseId','solarPanelMq']]
 
 # inizializzo la regressione lineare impostando i parametri
-linear_reg=LinearRegression(fit_intercept=False, normalize=False)
+linear_reg=LinearRegression(fit_intercept=True, normalize=False)
 
 # calcolo i theta della regressione lineare  usando i dati di train
 linear_reg.fit(train,label)

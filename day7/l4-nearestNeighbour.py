@@ -74,29 +74,30 @@ if __name__ == '__main__':
     X_validation = validation[col2keep]
     X_test = test[col2keep]
 
-    # Fine parte 1 --------------------------------------------------------------------------------------------------
-    # inizializzo la regressione lineare impostando i parametri
-    nn = KNeighborsRegressor(n_neighbors=4)
+    for kk in range(1,50):
+        # Fine parte 1 --------------------------------------------------------------------------------------------------
+        # inizializzo la regressione lineare impostando i parametri
+        nn = KNeighborsRegressor(n_neighbors=kk)
 
-    # calcolo i theta della regressione lineare  usando i dati di train
-    nn.fit(X_train, y_train)
+        # calcolo i theta della regressione lineare  usando i dati di train
+        nn.fit(X_train, y_train)
 
-    # applico la regressione lineare ai dati di test, train e validation calcolando le previsioni
-    test['prediction'] = nn.predict(X_test)
-    validation['prediction'] = nn.predict(X_validation)
-    train['prediction'] = nn.predict(X_train)
+        # applico la regressione lineare ai dati di test, train e validation calcolando le previsioni
+        test['prediction'] = nn.predict(X_test)
+        validation['prediction'] = nn.predict(X_validation)
+        train['prediction'] = nn.predict(X_train)
 
-    # Fine parte 2 --------------------------------------------------------------------------------------------------
-    # genero il file per la submission su kaggle
-    generateSubmission(test)
+        # Fine parte 2 --------------------------------------------------------------------------------------------------
+        # genero il file per la submission su kaggle
+        generateSubmission(test)
 
 
 
-    # stampo le performance su train e validation set:
-    print('\n')
-    print('train performace =' + str(np.sqrt(mean_squared_error(train['wattConsumption'], train['prediction']))))
-    print('validation performace =' + str(np.sqrt(mean_squared_error(validation['wattConsumption'], validation['prediction']))))
-    print(train['wattConsumption'].std())
+        # stampo le performance su train e validation set:
+        print('\n')
+        #print('train performace =' + str(np.sqrt(mean_squared_error(train['wattConsumption'], train['prediction']))))
+        print(str(kk)+' validation performace =' + str(np.sqrt(mean_squared_error(validation['wattConsumption'], validation['prediction']))))
+        #print(train['wattConsumption'].std())
 
     # togli il commento per visualizzare le predizioni
     #plotTimeSeries(train, validation, 3)

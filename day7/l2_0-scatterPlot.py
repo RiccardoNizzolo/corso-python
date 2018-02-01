@@ -21,7 +21,8 @@ if __name__ == '__main__':
         singleHouseData=train[train['HouseId']==houseId]
 
         # genero il plot per la singola houseId
-        houseIdplot=go.Scatter(x=singleHouseData['datetime'],y=singleHouseData['wattConsumption'],name=str(houseId))
+        #houseIdplot=go.Scatter(x=singleHouseData['datetime'],y=singleHouseData['wattConsumption'],name=str(houseId))
+        houseIdplot=go.Scatter(x=singleHouseData['T_HR_AVG'],y=singleHouseData['wattConsumption'],name=str(houseId),mode='markers')
 
         # appendo il plot alla lista dei plot
         plotList.append(houseIdplot)
@@ -29,7 +30,7 @@ if __name__ == '__main__':
 
     py.plot(plotList)
 
-    # ESERCIZIO crea uno scatter plot di temperatura vs consumo colorato per house id.
+    # ESERCIZIO crea uno scatter plot di temperatura vs consumo, colorato per house id.
     # Dato che non si tratta di una serie temporale dovresti disegnare punti e non linee (marker mode)
     # HINT: in questa doc è spiegato come usare la marker mode: https://plot.ly/python/line-and-scatter/
     # -------------------------------------------------------------------------------------- your code here!!!
